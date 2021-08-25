@@ -1,12 +1,12 @@
 function calculateBMI() {
     let weightInput = document.getElementById("weight");
-    let weightValue = parseFloat(weightInput.value);
+    let weightValue = parseFloat(weightInput.value || 0) ;
 
     let heightFeetInput = document.getElementById('height-ft');
-    let heightFeetValue = parseFloat(heightFeetInput.value);
+    let heightFeetValue = parseFloat(heightFeetInput.value || 0);
 
     let heightInchInput = document.getElementById('height-inch');
-    let heightInchValue = parseFloat(heightInchInput.value);
+    let heightInchValue = parseFloat(heightInchInput.value || 0);
 
     let totalInch = heightFeetValue * 12 + heightInchValue;
 
@@ -57,16 +57,21 @@ const  getStatus = (bmi) => {
     }
 }
 
-function isValidInput()
+function isValidInput(weight, heightFeet, heightInch)
 {
     let valid = true;
 
     for (const value of arguments){
-        console.log(value);
-        if (isNaN(value) || value < 0){
+        if (isNaN(value) && value < 0){
             valid = false;
             break;
         }
     }
+
+    // case input : weight 0; FT 0; inch 0;
+    if (heightFeet * 12 + heightInch == 0) {
+        valid = false;
+    }
+
     return valid;
 }
