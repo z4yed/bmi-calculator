@@ -62,7 +62,7 @@ function isValidInput(weight, heightFeet, heightInch)
     let valid = true;
 
     for (const value of arguments){
-        if (isNaN(value) && value < 0){
+        if (isNaN(value) || value < 0){
             valid = false;
             break;
         }
