@@ -25,7 +25,7 @@
     <main>
         <h2 class="text-center text-white mt-5">BMI Calculator</h2>
 
-        <div class="row">
+        <div class="row mt-5">
             <div class="col-12 col-md-6 ">
                 <section class="text-white">
                     <div class="my-3">
@@ -37,18 +37,28 @@
                         <input type="text" id="height-inch" class="form-control w-25 my-3 d-inline" style="width: 10%;">
                         <br>
                         <button onclick="calculateBMI()" class="btn btn-info mt-3">Calculate</button>
-                        <button id="error-msg" class="btn btn-danger mt-3 d-none" disabled>X Incorrect Input. All Input must be Positive Integer</button>
+                        <button id="error-msg" class="btn btn-danger mt-3 d-none" disabled>X Incorrect Input. Weight &
+                            Height Must be positive. </button>
                     </div>
                 </section>
             </div>
-            <div class="col-12 col-md-6 my-auto" style="background: white;">
-                    <h2>BMI Value: <span id="bmi-value" class="text-info"> - </span> </h2>
-                    <h2>BMI Status: <span id="bmi-status" class="text-info"> - </span> </h2>
+            <div class="col-12 col-md-6 my-auto p-3" style="background: rgb(204, 200, 200);">
+                <h2>BMI Value: <span id="bmi-value" class="text-info"> - </span> </h2>
+                <h2>Weight Status: <span id="bmi-status" class="text-info"> - </span> </h2>
+                
+                <hr>
+                <div style="background-color: darkslategray;">
+                    <img src="images/bmi.png" class="img-fluid mt-4" alt="">
+                </div>
             </div>
 
         </div>
 
     </main>
+
+    <footer>
+        <p class="text-center text-white mt-4 mb-0">Copyright | All right reserved.  @Zayed Hassan</p>
+    </footer>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

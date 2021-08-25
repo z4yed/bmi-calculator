@@ -47,13 +47,13 @@ const  getStatus = (bmi) => {
         return "Overweight";
     }
     else if (bmi >= 30 && bmi <= 34.9) {
-        return "Obese";
+        return "Obesity Class I";
     }
     else if (bmi >= 35 && bmi <= 39.9) {
-        return "Severely Obese";
+        return "Obesity Class II";
     }
     else {
-        return "Morbidly Obese";
+        return "Obesity Class III";
     }
 }
 
